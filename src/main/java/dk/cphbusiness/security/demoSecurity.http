@@ -20,3 +20,33 @@ Authorization: Baerer eyJhGciOiJIUzI1NiJ9.eyJpc3MiOiJUaG9tYXMgSGFydG1hbm4iLCJzdW
 GET http://localhost:7007/api/protected/admin_demo
 Authorization: Baerer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUaG9tYXMgSGFydG1hbm4iLCJzdWIiOiJ0ZXN0IiwiZXhwIjoxNjk3MDQxNjQ4LCJyb2xlcyI6InVzZXIiLCJ1c2VybmFtZSI6InRlc3QifQ.8b7o0ADrpO11iBfIkyb9RHvgZBD6MXf8xoy9DIG_j6o
 ###
+
+POST https://api.cphbusinessapps.dk/api/auth/register
+
+{
+    "username": "admin",
+    "password": "test123"
+}
+###
+POST https://api.cphbusinessapps.dk/api/auth/login
+
+{
+    "username": "admin",
+    "password": "test123"
+}
+###
+POST http://localhost:7007/api/auth/login
+
+{
+    "username": "admin",
+    "password": "test123"
+}
+###
+GET http://localhost:7007/api/protected/user_demo
+Authorization: Baerer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUaG9tYXMgSGFydG1hbm4iLCJzdWIiOiJhZG1pbiIsImV4cCI6MTcwMTgxMDg2MCwicm9sZXMiOiJ1c2VyIiwidXNlcm5hbWUiOiJhZG1pbiJ9.o2aeA915hRRjPZCDBdlTmf7BZLq_ytYL0IsquIoqmPo
+
+
+###
+GET http://localhost:7007/api/person
+Authorization: Baerer eyJciOiJIUzI1NiJ9.eyJpc3MiOiJUaG9tYXMgSGFydG1hbm4iLCJzdWIiOiJhZG1pbiIsImV4cCI6MTcwMTgxMDg2MCwicm9sZXMiOiJ1c2VyIiwidXNlcm5hbWUiOiJhZG1pbiJ9.o2aeA915hRRjPZCDBdlTmf7BZLq_ytYL0IsquIoqmPo
+
